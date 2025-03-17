@@ -1,4 +1,6 @@
 # Write function here
+def calculate_pay(hours_worked, pay_per_hour):
+    return hours_worked * pay_per_hour
 
 # Worked 40 hours at $20 an hour
 print(calculate_pay(40,20))

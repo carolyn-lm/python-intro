@@ -7,9 +7,18 @@ def calculate_pay(hours_worked, pay_per_hour):
         return overtime_pay + regular_pay
     return hours_worked * pay_per_hour
 
+def calculate_monthly_pay(wk_1_hours, wk_2_hours, wk_3_hours, wk_4_hours, pay_per_hour):
+    week1_pay = calculate_pay(wk_1_hours, pay_per_hour)
+    week2_pay = calculate_pay(wk_2_hours, pay_per_hour)
+    week3_pay = calculate_pay(wk_3_hours, pay_per_hour)
+    week4_pay = calculate_pay(wk_4_hours, pay_per_hour);
+    return week1_pay + week2_pay + week3_pay + week4_pay
+
 # Worked 40 hours at $20 an hour
 print(calculate_pay(40,20))
 # Worked 50 hours at $20 an hour
 print(calculate_pay(50,20))
 # Worked 40 hours at $12 an hour
 print(calculate_pay(40,12))
+
+print(calculate_monthly_pay(40,50,35,40,50))

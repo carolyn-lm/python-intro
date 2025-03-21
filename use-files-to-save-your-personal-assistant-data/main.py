@@ -6,7 +6,7 @@ from PersonalAssistant import PersonalAssistant
 with open("todo.json", "r") as todos:
     todo_list = json.load(todos)
 
-assistant = PersonalAssistant(todo_list)
+    assistant = PersonalAssistant(todo_list)
 
 done = False
 

@@ -3,6 +3,12 @@ class PersonalAssistant:
     self.contacts = {}
     self.todos = todos
 
+  def get_contact(self, name):
+    if name in self.contacts:
+      return self.contacts[name]
+    else:
+      return "No contact with that name"
+    
   def add_todo(self, new_item):
     self.todos.append(new_item)
 
@@ -30,8 +36,3 @@ class PersonalAssistant:
       return "Can’t find a birthday for this person"
 
   
-  def get_contact(self, name):
-    if name in self.contacts:
-      return self.contacts[name]
-    else:
-      return "No contact with that name"
